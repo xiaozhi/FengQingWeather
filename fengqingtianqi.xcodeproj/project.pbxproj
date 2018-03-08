@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17D420513A1600E8F78F /* ServiceConfiguration.swift */; };
+		472B17DE20513B7200E8F78F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DD20513B7200E8F78F /* Forecast.swift */; };
+		472B17E020513FF500E8F78F /* ForecastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DF20513FF500E8F78F /* ForecastTest.swift */; };
 		4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F7202DA6100030E6F9 /* AppDelegate.swift */; };
 		4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F9202DA6100030E6F9 /* ViewController.swift */; };
 		4788B3FD202DA6100030E6F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4788B3FB202DA6100030E6F9 /* Main.storyboard */; };
 		4788B3FF202DA6100030E6F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4788B3FE202DA6100030E6F9 /* Assets.xcassets */; };
 		4788B402202DA6100030E6F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4788B400202DA6100030E6F9 /* LaunchScreen.storyboard */; };
 		4788B40D202DA6100030E6F9 /* fengqingtianqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */; };
+		4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B418202DAD800030E6F9 /* WeatherService.swift */; };
+		C503B0892321396EE0E7D741 /* Pods_fengqingtianqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9816573807FFC3147952C8 /* Pods_fengqingtianqi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		436641B78B9290E1D77FBB07 /* Pods-fengqingtianqi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fengqingtianqi.release.xcconfig"; path = "Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi.release.xcconfig"; sourceTree = "<group>"; };
+		472B17D420513A1600E8F78F /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
+		472B17DD20513B7200E8F78F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		472B17DF20513FF500E8F78F /* ForecastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTest.swift; sourceTree = "<group>"; };
 		4788B3F4202DA6100030E6F9 /* fengqingtianqi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fengqingtianqi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4788B3F7202DA6100030E6F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4788B3F9202DA6100030E6F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,9 @@
 		4788B408202DA6100030E6F9 /* fengqingtianqiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fengqingtianqiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fengqingtianqiTests.swift; sourceTree = "<group>"; };
 		4788B40E202DA6100030E6F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4788B418202DAD800030E6F9 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		53A8C44AE32763CF2845FD2C /* Pods-fengqingtianqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fengqingtianqi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi.debug.xcconfig"; sourceTree = "<group>"; };
+		6B9816573807FFC3147952C8 /* Pods_fengqingtianqi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fengqingtianqi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C503B0892321396EE0E7D741 /* Pods_fengqingtianqi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +69,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472B17D620513AB900E8F78F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				472B17D920513AE700E8F78F /* ViewController */,
+				472B17D820513AE100E8F78F /* Model */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		472B17D820513AE100E8F78F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				472B17DD20513B7200E8F78F /* Forecast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		472B17D920513AE700E8F78F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		472B17DA20513B1300E8F78F /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				472B17DB20513B1A00E8F78F /* Model */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		472B17DB20513B1A00E8F78F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				472B17DF20513FF500E8F78F /* ForecastTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4788B3EB202DA6100030E6F9 = {
 			isa = PBXGroup;
 			children = (
 				4788B3F6202DA6100030E6F9 /* fengqingtianqi */,
 				4788B40B202DA6100030E6F9 /* fengqingtianqiTests */,
 				4788B3F5202DA6100030E6F9 /* Products */,
+				61E5791282803521876CD61B /* Pods */,
+				7856203CBB83FF90EE96001A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +132,8 @@
 		4788B3F6202DA6100030E6F9 /* fengqingtianqi */ = {
 			isa = PBXGroup;
 			children = (
+				472B17D620513AB900E8F78F /* Weather */,
+				4788B417202DAD730030E6F9 /* Service */,
 				4788B3F7202DA6100030E6F9 /* AppDelegate.swift */,
 				4788B3F9202DA6100030E6F9 /* ViewController.swift */,
 				4788B3FB202DA6100030E6F9 /* Main.storyboard */,
@@ -90,10 +147,37 @@
 		4788B40B202DA6100030E6F9 /* fengqingtianqiTests */ = {
 			isa = PBXGroup;
 			children = (
+				472B17DA20513B1300E8F78F /* Weather */,
 				4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */,
 				4788B40E202DA6100030E6F9 /* Info.plist */,
 			);
 			path = fengqingtianqiTests;
+			sourceTree = "<group>";
+		};
+		4788B417202DAD730030E6F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4788B418202DAD800030E6F9 /* WeatherService.swift */,
+				472B17D420513A1600E8F78F /* ServiceConfiguration.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		61E5791282803521876CD61B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53A8C44AE32763CF2845FD2C /* Pods-fengqingtianqi.debug.xcconfig */,
+				436641B78B9290E1D77FBB07 /* Pods-fengqingtianqi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7856203CBB83FF90EE96001A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B9816573807FFC3147952C8 /* Pods_fengqingtianqi.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4788B411202DA6100030E6F9 /* Build configuration list for PBXNativeTarget "fengqingtianqi" */;
 			buildPhases = (
+				9A5BD776F5F5B5BF220D3E8D /* [CP] Check Pods Manifest.lock */,
 				4788B3F0202DA6100030E6F9 /* Sources */,
 				4788B3F1202DA6100030E6F9 /* Frameworks */,
 				4788B3F2202DA6100030E6F9 /* Resources */,
+				987E55067F0B6AEECBC63C24 /* [CP] Embed Pods Frameworks */,
+				93490D5B6C643A101564E6D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,13 +281,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		93490D5B6C643A101564E6D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		987E55067F0B6AEECBC63C24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A5BD776F5F5B5BF220D3E8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fengqingtianqi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4788B3F0202DA6100030E6F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */,
 				4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */,
+				472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */,
 				4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */,
+				472B17DE20513B7200E8F78F /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472B17E020513FF500E8F78F /* ForecastTest.swift in Sources */,
 				4788B40D202DA6100030E6F9 /* fengqingtianqiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +502,7 @@
 		};
 		4788B412202DA6100030E6F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53A8C44AE32763CF2845FD2C /* Pods-fengqingtianqi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -366,6 +518,7 @@
 		};
 		4788B413202DA6100030E6F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436641B78B9290E1D77FBB07 /* Pods-fengqingtianqi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

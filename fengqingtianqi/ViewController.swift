@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Moya
 
 class ViewController: UIViewController {
-
+    let provider = MoyaProvider<WeatherService>()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.buttonTap(self);
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +24,18 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func buttonTap(_ sender: Any) {
+        
+        provider.request(.forecast("shenzhen")) { result in
+            switch result {
+            case let .success(response):
+                let string = String(data: response.data, encoding: .utf8)
+                let json = JSONDecoder.init()
+                print(string)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
 }
 
