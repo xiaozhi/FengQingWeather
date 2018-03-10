@@ -26,8 +26,9 @@ extension WeatherService: TargetType {
         switch self {
         case .forecast:
             return "/s6/weather/forecast"
+        
         case .now:
-            return ""
+            return "weather/now"
         }
     }
     
@@ -45,8 +46,8 @@ extension WeatherService: TargetType {
         switch self {
         case .forecast(let city):
             return .requestParameters(parameters: ["location": city, "key": ServiceKey], encoding: URLEncoding.default)
-        default:
-            return .requestPlain
+        case . now(let city):
+            return .requestParameters(parameters: ["location": city, "key": ServiceKey], encoding: URLEncoding.default)
         }
         
     }

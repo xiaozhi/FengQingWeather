@@ -89,6 +89,7 @@
 		472B17D920513AE700E8F78F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4788B3F9202DA6100030E6F9 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,7 +136,6 @@
 				472B17D620513AB900E8F78F /* Weather */,
 				4788B417202DAD730030E6F9 /* Service */,
 				4788B3F7202DA6100030E6F9 /* AppDelegate.swift */,
-				4788B3F9202DA6100030E6F9 /* ViewController.swift */,
 				4788B3FB202DA6100030E6F9 /* Main.storyboard */,
 				4788B3FE202DA6100030E6F9 /* Assets.xcassets */,
 				4788B400202DA6100030E6F9 /* LaunchScreen.storyboard */,
