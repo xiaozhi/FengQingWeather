@@ -8,21 +8,25 @@
 
 import UIKit
 import Moya
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
     let provider = MoyaProvider<WeatherService>()
     
+    @IBOutlet weak var temputureLabel: UILabel!
+    @IBOutlet weak var weatherLabel: UILabel!
+    
+    let mainViewModel = MainViewModel()
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.buttonTap(self);
+        
+        mainViewModel.requestForecast().map { (forecastList) -> String in
+            return forecastList.locationInfo!.parentCity!
+        }.bind(to: temputureLabel.rx.text).disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     @IBAction func buttonTap(_ sender: Any) {
         

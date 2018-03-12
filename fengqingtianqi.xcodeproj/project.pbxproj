@@ -10,6 +10,7 @@
 		472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17D420513A1600E8F78F /* ServiceConfiguration.swift */; };
 		472B17DE20513B7200E8F78F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DD20513B7200E8F78F /* Forecast.swift */; };
 		472B17E020513FF500E8F78F /* ForecastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DF20513FF500E8F78F /* ForecastTest.swift */; };
+		472B17E52054202C00E8F78F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17E42054202C00E8F78F /* MainViewModel.swift */; };
 		4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F7202DA6100030E6F9 /* AppDelegate.swift */; };
 		4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F9202DA6100030E6F9 /* ViewController.swift */; };
 		4788B3FD202DA6100030E6F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4788B3FB202DA6100030E6F9 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		4788B402202DA6100030E6F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4788B400202DA6100030E6F9 /* LaunchScreen.storyboard */; };
 		4788B40D202DA6100030E6F9 /* fengqingtianqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */; };
 		4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B418202DAD800030E6F9 /* WeatherService.swift */; };
+		47EDB724205564D40007DDB6 /* Observable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDB723205564D40007DDB6 /* Observable+JSON.swift */; };
 		C503B0892321396EE0E7D741 /* Pods_fengqingtianqi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9816573807FFC3147952C8 /* Pods_fengqingtianqi.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 		472B17D420513A1600E8F78F /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		472B17DD20513B7200E8F78F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		472B17DF20513FF500E8F78F /* ForecastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTest.swift; sourceTree = "<group>"; };
+		472B17E42054202C00E8F78F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		4788B3F4202DA6100030E6F9 /* fengqingtianqi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fengqingtianqi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4788B3F7202DA6100030E6F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4788B3F9202DA6100030E6F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fengqingtianqiTests.swift; sourceTree = "<group>"; };
 		4788B40E202DA6100030E6F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4788B418202DAD800030E6F9 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		47EDB723205564D40007DDB6 /* Observable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+JSON.swift"; sourceTree = "<group>"; };
 		53A8C44AE32763CF2845FD2C /* Pods-fengqingtianqi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fengqingtianqi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi.debug.xcconfig"; sourceTree = "<group>"; };
 		6B9816573807FFC3147952C8 /* Pods_fengqingtianqi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fengqingtianqi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +76,7 @@
 		472B17D620513AB900E8F78F /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				472B17E120541A3200E8F78F /* ViewModel */,
 				472B17D920513AE700E8F78F /* ViewController */,
 				472B17D820513AE100E8F78F /* Model */,
 			);
@@ -110,6 +115,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		472B17E120541A3200E8F78F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				472B17E42054202C00E8F78F /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4788B3EB202DA6100030E6F9 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +146,7 @@
 		4788B3F6202DA6100030E6F9 /* fengqingtianqi */ = {
 			isa = PBXGroup;
 			children = (
+				47EDB722205564920007DDB6 /* extension */,
 				472B17D620513AB900E8F78F /* Weather */,
 				4788B417202DAD730030E6F9 /* Service */,
 				4788B3F7202DA6100030E6F9 /* AppDelegate.swift */,
@@ -161,6 +175,14 @@
 				472B17D420513A1600E8F78F /* ServiceConfiguration.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		47EDB722205564920007DDB6 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				47EDB723205564D40007DDB6 /* Observable+JSON.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		61E5791282803521876CD61B /* Pods */ = {
@@ -307,6 +329,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -314,6 +337,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +375,8 @@
 				472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */,
 				4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */,
 				472B17DE20513B7200E8F78F /* Forecast.swift in Sources */,
+				47EDB724205564D40007DDB6 /* Observable+JSON.swift in Sources */,
+				472B17E52054202C00E8F78F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

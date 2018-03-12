@@ -128,10 +128,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="temputureLabel" destination="drZ-sP-ZPI" id="fll-p4-Tba"/>
+                        <outlet property="weatherLabel" destination="hCl-VB-4RH" id="tsH-hg-LOf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="130" y="39"/>
         </scene>
     </scenes>
     <resources>
