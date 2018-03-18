@@ -11,14 +11,6 @@ import XCTest
 
 class ForecastTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
     func testJSONParse() {
         let jsonString = """
                 {
@@ -102,6 +94,7 @@ class ForecastTest: XCTestCase {
         do {
             let forecastList = try JSONDecoder().decode(ForecastList.self, from: jsonData)
             assert(forecastList.locationInfo != nil, "解析ForecastList里面的location失败")
+            assert(forecastList.forecasts != nil, "解析forecasts里面的location失败")
         } catch {
             assertionFailure("解析ForecastList失败")
             print(error)

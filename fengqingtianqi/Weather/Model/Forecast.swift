@@ -9,36 +9,26 @@
 import Foundation
 
 /// 天气预测列表
-class ForecastList: Codable {
-    var locationInfo: LocationInfo?
+class ForecastList: BaseModel {
     var forecasts: [DailyForecast]?
-    var status: String!
     
-    enum CodingKeys: String, CodingKey {
-        case locationInfo = "basic"
+    private enum CodingKeys: String, CodingKey {
         case forecasts = "daily_forecast"
-        case status = "status"
     }
-}
-
-class LocationInfo: Codable {
-    var cityID: String!
-    var areaName: String!
-    var parentCity: String!
-    var adminArea: String! //行政区域
-    var country: String!
-    var timeZone: String!
     
-    enum CodingKeys: String, CodingKey {
-        case cityID = "cid"
-        case areaName = "location"
-        case parentCity = "parent_city"
-        case adminArea = "admin_area"
-        case country = "cnty"
-        case timeZone = "tz"
+    required init(from decoder: Decoder) throws {
+        try super.init(from: decoder)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        forecasts = try container.decode([DailyForecast].self, forKey: .forecasts)
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+        
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(forecasts, forKey: .forecasts)
     }
 }
-
 
 /// 每天的预测
 class DailyForecast: Codable {

@@ -28,7 +28,7 @@ extension WeatherService: TargetType {
             return "/s6/weather/forecast"
         
         case .now:
-            return "weather/now"
+            return "/s6/weather/now"
         }
     }
     
@@ -41,15 +41,13 @@ extension WeatherService: TargetType {
         return "".data(using: .utf8)!
     }
     
-    
     var task: Task {
         switch self {
-        case .forecast(let city):
-            return .requestParameters(parameters: ["location": city, "key": ServiceKey], encoding: URLEncoding.default)
-        case . now(let city):
-            return .requestParameters(parameters: ["location": city, "key": ServiceKey], encoding: URLEncoding.default)
+        case .forecast(let location):
+            return .requestParameters(parameters: ["location": location, "key": ServiceKey], encoding: URLEncoding.default)
+        case . now(let location):
+            return .requestParameters(parameters: ["location": location, "key": ServiceKey], encoding: URLEncoding.default)
         }
-        
     }
     
     var headers: [String : String]? {
