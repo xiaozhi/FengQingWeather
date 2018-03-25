@@ -39,7 +39,7 @@ class DailyForecast: Codable {
     var moonRise: String!
     var moonSet: String!
     
-    var maxTemperature: Int!
+    var maxTemperature: String!
     var minTemperature: String!
     
     var conditionCodeDay: String!
@@ -47,32 +47,44 @@ class DailyForecast: Codable {
     var conditionTextDay: String!
     var conditionTextNight: String!
     
-    var windAngle: Int!
+    var windAngle: String
     var windDirection: String!
     var windPower: String!
     var windSpeed: String!
     
-    var humidity: Int! //相对湿度
-    var pcpn: Int! //降水量
-    var pop: Int! //降水概率
-    var pres: Int! //大气压强
-    var uvIndex: Int! //紫外线强度指数
-    var vis: Int! //能见度
+    var humidity: String! //相对湿度
+    var pcpn: String! //降水量
+    var pop: String! //降水概率
+    var pres: String! //大气压强
+    var uvIndex: String! //紫外线强度指数
+    var vis: String! //能见度
     
     enum CodingKeys: String, CodingKey {
         case date = "date"
         
         case sunRise = "sr"
         case sunSet = "ss"
+        case moonRise = "mr"
         case moonSet = "ms"
         case maxTemperature = "tmp_max"
         case minTemperature = "tmp_min"
-    }
-    
-    required init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let maxString = try values.decode(String.self, forKey: .maxTemperature)
-        maxTemperature = Int(maxString)
+        case conditionCodeDay = "cond_code_d"
+        
+        case conditionCodeNight = "cond_code_n"
+        case conditionTextDay = "cond_txt_d"
+        case conditionTextNight = "cond_txt_n"
+        case windAngle = "wind_deg"
+        case windDirection = "wind_dir"
+        case windPower = "wind_sc"
+        case windSpeed = "wind_spd"
+        
+        case humidity = "hum"
+        case pcpn = "pcpn"
+        case pop = "pop"
+        case pres = "pres"
+        case uvIndex = "uv_index"
+        case vis = "vis"
+        
     }
     
 }

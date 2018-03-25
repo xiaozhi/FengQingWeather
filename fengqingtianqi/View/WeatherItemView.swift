@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 
 class WeatherItemView: UIView {
 
@@ -20,17 +20,26 @@ class WeatherItemView: UIView {
     @IBOutlet weak var nightWeatherLabel: UILabel!
 
     required init?(coder aDecoder: NSCoder) {
-//        let view = UINib.init(nibName: "WeatherItenView", bundle: nil)
-        let view = Bundle.main.loadNibNamed("WeatherIntemView", owner: self, options: nil)
+        super.init(coder: aDecoder)
+        let loadView = Bundle.main.loadNibNamed("WeatherItemView", owner: self, options: nil)?.first  as! UIView
         
+        loadView.backgroundColor = UIColor.clear
+        backgroundColor = UIColor.clear
+        
+        addSubview(loadView)
+        loadView.snp.makeConstraints { (maker) in
+            maker.edges.equalToSuperview()
+        }
+        
+        dayImageView.tintColor = UIColor.white
+        nightImageView.tintColor = UIColor.white
     }
     
     func fillView(model : DailyForecast) {
-        dayImageView.image = UIImage(named: model.conditionCodeDay)
+        dayImageView.image = UIImage(named: model.conditionCodeDay)?.withRenderingMode(.alwaysTemplate)
         dayWeatherLabel.text = model.conditionTextDay
-        nightImageView.image = UIImage(named: model.conditionCodeNight)
+        nightImageView.image = UIImage(named: model.conditionCodeNight)?.withRenderingMode(.alwaysTemplate)
         nightWeatherLabel.text = model.conditionTextNight
-        
         windLabel.text = model.windDirection + " " + model.windSpeed + "km/s"
     }
 }
