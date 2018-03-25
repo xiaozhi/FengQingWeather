@@ -14,18 +14,16 @@ import RxCocoa
 class ViewController: UIViewController {
     let provider = MoyaProvider<WeatherService>()
     
-    @IBOutlet weak var temputureLabel: UILabel!
-    @IBOutlet weak var weatherLabel: UILabel!
-    
     let mainViewModel = MainViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainViewModel.requestForecast().map { (forecastList) -> String in
-            return forecastList.locationInfo!.parentCity!
-        }.bind(to: temputureLabel.rx.text).disposed(by: disposeBag)
+//        mainViewModel.requestForecast().map { (forecastList) -> String? in
+//            return forecastList.locationInfo?.parentCity
+//        }.bind(to: temputureLabel.rx.text).disposed(by: disposeBag)
+        
     }
 
     @IBAction func buttonTap(_ sender: Any) {

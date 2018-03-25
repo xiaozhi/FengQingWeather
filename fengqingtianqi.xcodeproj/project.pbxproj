@@ -19,6 +19,8 @@
 		4788B40D202DA6100030E6F9 /* fengqingtianqiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B40C202DA6100030E6F9 /* fengqingtianqiTests.swift */; };
 		4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B418202DAD800030E6F9 /* WeatherService.swift */; };
 		479911D1205E19CE00DB4CF0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479911D0205E19CE00DB4CF0 /* BaseModel.swift */; };
+		479911D4205E699300DB4CF0 /* WeatherItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479911D3205E699300DB4CF0 /* WeatherItemView.swift */; };
+		479911D6205E69B300DB4CF0 /* WeatherItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479911D5205E69B300DB4CF0 /* WeatherItemView.xib */; };
 		47EDB724205564D40007DDB6 /* Observable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDB723205564D40007DDB6 /* Observable+JSON.swift */; };
 		47EDB7272056BBB40007DDB6 /* NowWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDB7262056BBB40007DDB6 /* NowWeather.swift */; };
 		47EDB7292056C2080007DDB6 /* NowWeatherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47EDB7282056C2080007DDB6 /* NowWeatherTest.swift */; };
@@ -53,6 +55,8 @@
 		4788B40E202DA6100030E6F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4788B418202DAD800030E6F9 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		479911D0205E19CE00DB4CF0 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		479911D3205E699300DB4CF0 /* WeatherItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItemView.swift; sourceTree = "<group>"; };
+		479911D5205E69B300DB4CF0 /* WeatherItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherItemView.xib; sourceTree = "<group>"; };
 		47EDB723205564D40007DDB6 /* Observable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+JSON.swift"; sourceTree = "<group>"; };
 		47EDB7262056BBB40007DDB6 /* NowWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeather.swift; sourceTree = "<group>"; };
 		47EDB7282056C2080007DDB6 /* NowWeatherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowWeatherTest.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 		4788B3F6202DA6100030E6F9 /* fengqingtianqi */ = {
 			isa = PBXGroup;
 			children = (
+				479911D2205E696C00DB4CF0 /* View */,
 				47EDB722205564920007DDB6 /* extension */,
 				472B17D620513AB900E8F78F /* Weather */,
 				4788B417202DAD730030E6F9 /* Service */,
@@ -184,6 +189,15 @@
 				472B17D420513A1600E8F78F /* ServiceConfiguration.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		479911D2205E696C00DB4CF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				479911D3205E699300DB4CF0 /* WeatherItemView.swift */,
+				479911D5205E69B300DB4CF0 /* WeatherItemView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		47EDB722205564920007DDB6 /* extension */ = {
@@ -299,6 +313,7 @@
 			files = (
 				4788B402202DA6100030E6F9 /* LaunchScreen.storyboard in Resources */,
 				4788B3FF202DA6100030E6F9 /* Assets.xcassets in Resources */,
+				479911D6205E69B300DB4CF0 /* WeatherItemView.xib in Resources */,
 				4788B3FD202DA6100030E6F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479911D4205E699300DB4CF0 /* WeatherItemView.swift in Sources */,
 				479911D1205E19CE00DB4CF0 /* BaseModel.swift in Sources */,
 				4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */,
 				4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */,

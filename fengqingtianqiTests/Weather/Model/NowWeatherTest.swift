@@ -48,6 +48,7 @@ class NowWeatherTest: XCTestCase {
         let jsonData = jsonString.data(using: .utf8)!
         do {
             let nowWeather = try JSONDecoder().decode(NowWeatherWapper.self, from: jsonData)
+            XCTAssert(nowWeather.nowWeather?.testProperty != nil, "NowWeather json parse fail")
             XCTAssert(nowWeather.nowWeather?.atmosphericPressure != nil, "NowWeather json parse fail")
         } catch {
             XCTFail("NowWeather json parse fail")

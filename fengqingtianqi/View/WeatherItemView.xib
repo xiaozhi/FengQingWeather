@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WeatherItemView" customModule="fengqingtianqi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="明天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ON0-uT-1bL">
+                    <rect key="frame" x="15" y="73.5" width="41" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="lGK-pR-4Tz">
+                    <rect key="frame" x="71" y="30.5" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="6ML-M9-dCX"/>
+                        <constraint firstAttribute="width" constant="25" id="tX3-LZ-QvC"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100" translatesAutoresizingMaskIntoConstraints="NO" id="LtN-mz-ZmP">
+                    <rect key="frame" x="71" y="116" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="WQI-i7-bPL"/>
+                        <constraint firstAttribute="height" constant="25" id="l70-HB-0xy"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阴天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JS9-Wc-0QY">
+                    <rect key="frame" x="111" y="34.5" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晴晴晴明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZg-3O-4Ut">
+                    <rect key="frame" x="111" y="119" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="西北风 14m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cPD-B5-hWm">
+                    <rect key="frame" x="187.5" y="73.5" width="122" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lGK-pR-4Tz" firstAttribute="leading" secondItem="ON0-uT-1bL" secondAttribute="trailing" constant="15" id="15o-h2-2Ka"/>
+                <constraint firstItem="JS9-Wc-0QY" firstAttribute="centerY" secondItem="lGK-pR-4Tz" secondAttribute="centerY" id="3rI-gv-XmW"/>
+                <constraint firstItem="LtN-mz-ZmP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="3:2" id="Kuh-QT-AD9"/>
+                <constraint firstItem="cPD-B5-hWm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NOT-5c-s5G"/>
+                <constraint firstItem="CZg-3O-4Ut" firstAttribute="width" secondItem="JS9-Wc-0QY" secondAttribute="width" id="YQ0-zq-yBC"/>
+                <constraint firstItem="JS9-Wc-0QY" firstAttribute="leading" secondItem="lGK-pR-4Tz" secondAttribute="trailing" constant="15" id="bT4-tr-e1o"/>
+                <constraint firstItem="ON0-uT-1bL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jDt-a6-sVC"/>
+                <constraint firstItem="CZg-3O-4Ut" firstAttribute="centerY" secondItem="LtN-mz-ZmP" secondAttribute="centerY" id="ncH-5y-lwc"/>
+                <constraint firstItem="ON0-uT-1bL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="pS8-AX-juR"/>
+                <constraint firstItem="LtN-mz-ZmP" firstAttribute="leading" secondItem="ON0-uT-1bL" secondAttribute="trailing" constant="15" id="phw-cF-U8j"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cPD-B5-hWm" secondAttribute="trailing" constant="15" id="qP1-fo-LGX"/>
+                <constraint firstItem="lGK-pR-4Tz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1:2" id="r1y-Pz-mWU"/>
+                <constraint firstItem="CZg-3O-4Ut" firstAttribute="leading" secondItem="LtN-mz-ZmP" secondAttribute="trailing" constant="15" id="ss0-wT-PDd"/>
+                <constraint firstItem="cPD-B5-hWm" firstAttribute="leading" secondItem="CZg-3O-4Ut" secondAttribute="trailing" constant="15" id="z2P-lJ-2iB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateLabel" destination="ON0-uT-1bL" id="YFD-O1-EM5"/>
+                <outlet property="dayImageView" destination="lGK-pR-4Tz" id="1Rr-nY-pLu"/>
+                <outlet property="dayWeatherLabel" destination="JS9-Wc-0QY" id="0xs-AE-FyB"/>
+                <outlet property="nightImageView" destination="LtN-mz-ZmP" id="A5d-pC-wvZ"/>
+                <outlet property="nightWeatherLabel" destination="CZg-3O-4Ut" id="KUe-Ms-wp6"/>
+                <outlet property="windLabel" destination="cPD-B5-hWm" id="ZIO-On-B5w"/>
+            </connections>
+            <point key="canvasLocation" x="-39" y="-122"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="100" width="100" height="100"/>
+    </resources>
+</document>

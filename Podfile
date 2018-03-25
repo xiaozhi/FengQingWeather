@@ -6,4 +6,5 @@ use_frameworks!
 target 'fengqingtianqi' do
     pod 'Moya/RxSwift', '~> 11.0'
     pod 'RxCocoa'
+    pod 'SnapKit'
 end

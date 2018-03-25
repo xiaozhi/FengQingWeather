@@ -17,4 +17,8 @@ class MainViewModel: NSObject {
         return weatherService.rx.request(.forecast("shenzhen")).asObservable().mapModel(type: ForecastList.self)
     }
     
+    func requestNowWeather() -> Observable<NowWeatherWapper> {
+        return weatherService.rx.request(.now("shenzhen")).asObservable().mapModel(type: NowWeatherWapper.self)
+    }
+    
 }
