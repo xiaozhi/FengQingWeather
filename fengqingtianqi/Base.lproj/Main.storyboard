@@ -23,6 +23,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G7Y-AG-uas">
                                 <rect key="frame" x="0.0" y="501" width="375" height="166"/>
                                 <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbt-ov-dOV">
+                                        <rect key="frame" x="0.0" y="83" width="375" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="pLq-Jp-oyb"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9X-kd-wGh" customClass="WeatherItemView" customModule="fengqingtianqi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,10 +45,13 @@
                                     <constraint firstAttribute="height" constant="166" id="4Zj-kA-Wxb"/>
                                     <constraint firstItem="V9X-kd-wGh" firstAttribute="leading" secondItem="G7Y-AG-uas" secondAttribute="leading" id="8Oc-qE-exW"/>
                                     <constraint firstAttribute="bottom" secondItem="1i0-NV-3wj" secondAttribute="bottom" id="Cfu-qW-xtJ"/>
+                                    <constraint firstItem="lbt-ov-dOV" firstAttribute="leading" secondItem="G7Y-AG-uas" secondAttribute="leading" id="LZg-uc-OPe"/>
+                                    <constraint firstAttribute="trailing" secondItem="lbt-ov-dOV" secondAttribute="trailing" id="LsN-4k-tEb"/>
                                     <constraint firstItem="1i0-NV-3wj" firstAttribute="leading" secondItem="G7Y-AG-uas" secondAttribute="leading" id="MXI-vh-dSD"/>
                                     <constraint firstItem="V9X-kd-wGh" firstAttribute="height" secondItem="G7Y-AG-uas" secondAttribute="height" multiplier="1:2" id="R7G-iT-AWU"/>
                                     <constraint firstAttribute="trailing" secondItem="V9X-kd-wGh" secondAttribute="trailing" id="buU-2E-Ehg"/>
                                     <constraint firstItem="1i0-NV-3wj" firstAttribute="top" secondItem="V9X-kd-wGh" secondAttribute="bottom" id="jdT-B0-K6j"/>
+                                    <constraint firstItem="lbt-ov-dOV" firstAttribute="top" secondItem="V9X-kd-wGh" secondAttribute="bottom" id="q6g-AT-J54"/>
                                     <constraint firstItem="V9X-kd-wGh" firstAttribute="top" secondItem="G7Y-AG-uas" secondAttribute="top" id="shd-oF-fMC"/>
                                 </constraints>
                             </view>

@@ -19,6 +19,11 @@ extension Response {
             }
             
             if let array = jsonDictionary["HeWeather6"] as? [Any], let firstItem = array.first {
+                
+                let data = try JSONSerialization.data(withJSONObject: firstItem, options: JSONSerialization.WritingOptions.prettyPrinted)
+                let jsonString = String(data: data, encoding: .utf8)
+                print("------- Response -------")
+                print(jsonString!)
                 return firstItem as? [String: Any]
             }
             

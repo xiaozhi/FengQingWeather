@@ -25,8 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var weatherDescriptionLabel: UILabel!
     
-    
-    let provider = MoyaProvider<WeatherService>()
     let mainViewModel = MainViewModel()
     let disposeBag = DisposeBag()
     
@@ -40,7 +38,13 @@ class ViewController: UIViewController {
         mainViewModel.requestForecast().subscribe(onNext: { (list) in
             self.setupView(list: list)
         }, onError: { (error) in
-            
+            print(error)
+        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
+        
+        mainViewModel.requestNowWeather().subscribe(onNext: {[weak self] (nowWeatherWapper) in
+            self?.temperatureLabel.text = (nowWeatherWapper.nowWeather?.temperature)! + "°"
+        }, onError: { (error) in
+            print(error)
         }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
     
@@ -53,7 +57,7 @@ class ViewController: UIViewController {
         
         if  let todayForecast = dailyForecasts.first {
             temperatureINtervalLabel.text = todayForecast.minTemperature + "° / " + todayForecast.maxTemperature + "°"
-            humidityLabel.text = "温度 " + todayForecast.humidity
+            humidityLabel.text = "湿度 " + todayForecast.humidity
             windLabel.text = todayForecast.windDirection + " " + todayForecast.windSpeed + "m/s"
             weatherDescriptionLabel.text = todayForecast.conditionTextDay
             weatherIconImageView.image = UIImage(named: todayForecast.conditionCodeDay)?.withRenderingMode(.alwaysTemplate)

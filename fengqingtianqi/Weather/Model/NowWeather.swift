@@ -11,7 +11,7 @@ import UIKit
 class NowWeatherWapper: BaseModel {
     var nowWeather: NowWeather?
     
-    enum CodingKeys: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case nowWeather = "now"
     }
     
@@ -47,8 +47,6 @@ class NowWeather: Codable{
     /// 云量
     var cloud: String!
     
-    var testProperty: String = "";
-    
     enum CodingKeys: String, CodingKey {
         case condCode = "cond_code"
         case condText = "cond_txt"
@@ -63,6 +61,5 @@ class NowWeather: Codable{
         case atmosphericPressure = "pres"
         case visibility = "vis"
         case cloud = "cloud"
-        case testProperty = "test_property"
     }
 }
