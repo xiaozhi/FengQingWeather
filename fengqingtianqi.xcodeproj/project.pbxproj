@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4717B538206750880086DB3D /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717B537206750880086DB3D /* TimeFormatter.swift */; };
+		4717B53A206790840086DB3D /* CityManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717B539206790840086DB3D /* CityManagerViewController.swift */; };
+		4717B53C2067947C0086DB3D /* china-city-list.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4717B53B2067947C0086DB3D /* china-city-list.txt */; };
+		4717B53E206794C50086DB3D /* CityReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717B53D206794C50086DB3D /* CityReader.swift */; };
+		4717B540206795180086DB3D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4717B53F206795180086DB3D /* City.swift */; };
 		472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17D420513A1600E8F78F /* ServiceConfiguration.swift */; };
 		472B17DE20513B7200E8F78F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DD20513B7200E8F78F /* Forecast.swift */; };
 		472B17E020513FF500E8F78F /* ForecastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DF20513FF500E8F78F /* ForecastTest.swift */; };
@@ -41,6 +45,10 @@
 /* Begin PBXFileReference section */
 		436641B78B9290E1D77FBB07 /* Pods-fengqingtianqi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fengqingtianqi.release.xcconfig"; path = "Pods/Target Support Files/Pods-fengqingtianqi/Pods-fengqingtianqi.release.xcconfig"; sourceTree = "<group>"; };
 		4717B537206750880086DB3D /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		4717B539206790840086DB3D /* CityManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityManagerViewController.swift; sourceTree = "<group>"; };
+		4717B53B2067947C0086DB3D /* china-city-list.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "china-city-list.txt"; sourceTree = "<group>"; };
+		4717B53D206794C50086DB3D /* CityReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityReader.swift; sourceTree = "<group>"; };
+		4717B53F206795180086DB3D /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		472B17D420513A1600E8F78F /* ServiceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
 		472B17DD20513B7200E8F78F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		472B17DF20513FF500E8F78F /* ForecastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTest.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4717B537206750880086DB3D /* TimeFormatter.swift */,
+				4717B53D206794C50086DB3D /* CityReader.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -109,6 +118,7 @@
 				472B17DD20513B7200E8F78F /* Forecast.swift */,
 				47EDB7262056BBB40007DDB6 /* NowWeather.swift */,
 				479911D0205E19CE00DB4CF0 /* BaseModel.swift */,
+				4717B53F206795180086DB3D /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4788B3F9202DA6100030E6F9 /* ViewController.swift */,
+				4717B539206790840086DB3D /* CityManagerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 				4788B3F7202DA6100030E6F9 /* AppDelegate.swift */,
 				4788B3FB202DA6100030E6F9 /* Main.storyboard */,
 				4788B3FE202DA6100030E6F9 /* Assets.xcassets */,
+				4717B53B2067947C0086DB3D /* china-city-list.txt */,
 				4788B400202DA6100030E6F9 /* LaunchScreen.storyboard */,
 				4788B403202DA6100030E6F9 /* Info.plist */,
 			);
@@ -323,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4788B402202DA6100030E6F9 /* LaunchScreen.storyboard in Resources */,
+				4717B53C2067947C0086DB3D /* china-city-list.txt in Resources */,
 				4788B3FF202DA6100030E6F9 /* Assets.xcassets in Resources */,
 				479911D6205E69B300DB4CF0 /* WeatherItemView.xib in Resources */,
 				4788B3FD202DA6100030E6F9 /* Main.storyboard in Resources */,
@@ -409,13 +422,16 @@
 			files = (
 				479911D4205E699300DB4CF0 /* WeatherItemView.swift in Sources */,
 				479911D1205E19CE00DB4CF0 /* BaseModel.swift in Sources */,
+				4717B53E206794C50086DB3D /* CityReader.swift in Sources */,
 				4788B419202DAD800030E6F9 /* WeatherService.swift in Sources */,
 				4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */,
 				472B17D520513A1600E8F78F /* ServiceConfiguration.swift in Sources */,
+				4717B540206795180086DB3D /* City.swift in Sources */,
 				4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */,
 				4717B538206750880086DB3D /* TimeFormatter.swift in Sources */,
 				472B17DE20513B7200E8F78F /* Forecast.swift in Sources */,
 				47EDB724205564D40007DDB6 /* Observable+JSON.swift in Sources */,
+				4717B53A206790840086DB3D /* CityManagerViewController.swift in Sources */,
 				472B17E52054202C00E8F78F /* MainViewModel.swift in Sources */,
 				47EDB7272056BBB40007DDB6 /* NowWeather.swift in Sources */,
 			);
