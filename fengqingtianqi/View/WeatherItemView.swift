@@ -37,7 +37,7 @@ class WeatherItemView: UIView {
     
     func fillView(model : DailyForecast) {
         dayImageView.image = UIImage(named: model.conditionCodeDay)?.withRenderingMode(.alwaysTemplate)
-        dayWeatherLabel.text = model.conditionTextDay
+        dayWeatherLabel.text = model.conditionTextDay + " " + model.minTemperature + "/" + model.maxTemperature
         nightImageView.image = UIImage(named: model.conditionCodeNight)?.withRenderingMode(.alwaysTemplate)
         nightWeatherLabel.text = model.conditionTextNight
         windLabel.text = model.windDirection + " " + model.windSpeed + "km/s"

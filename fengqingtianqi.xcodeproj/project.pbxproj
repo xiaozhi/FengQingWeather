@@ -16,6 +16,7 @@
 		472B17DE20513B7200E8F78F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DD20513B7200E8F78F /* Forecast.swift */; };
 		472B17E020513FF500E8F78F /* ForecastTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17DF20513FF500E8F78F /* ForecastTest.swift */; };
 		472B17E52054202C00E8F78F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472B17E42054202C00E8F78F /* MainViewModel.swift */; };
+		473827B2206E796F002171B2 /* SqliteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473827B1206E796F002171B2 /* SqliteHelper.swift */; };
 		4788B3F8202DA6100030E6F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F7202DA6100030E6F9 /* AppDelegate.swift */; };
 		4788B3FA202DA6100030E6F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4788B3F9202DA6100030E6F9 /* ViewController.swift */; };
 		4788B3FD202DA6100030E6F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4788B3FB202DA6100030E6F9 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		472B17DD20513B7200E8F78F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		472B17DF20513FF500E8F78F /* ForecastTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTest.swift; sourceTree = "<group>"; };
 		472B17E42054202C00E8F78F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		473827B1206E796F002171B2 /* SqliteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteHelper.swift; sourceTree = "<group>"; };
 		4788B3F4202DA6100030E6F9 /* fengqingtianqi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fengqingtianqi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4788B3F7202DA6100030E6F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4788B3F9202DA6100030E6F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				4717B537206750880086DB3D /* TimeFormatter.swift */,
 				4717B53D206794C50086DB3D /* CityReader.swift */,
+				473827B1206E796F002171B2 /* SqliteHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				472B17DE20513B7200E8F78F /* Forecast.swift in Sources */,
 				47EDB724205564D40007DDB6 /* Observable+JSON.swift in Sources */,
 				4717B53A206790840086DB3D /* CityManagerViewController.swift in Sources */,
+				473827B2206E796F002171B2 /* SqliteHelper.swift in Sources */,
 				472B17E52054202C00E8F78F /* MainViewModel.swift in Sources */,
 				47EDB7272056BBB40007DDB6 /* NowWeather.swift in Sources */,
 			);
@@ -592,6 +596,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKW6K38424;
 				INFOPLIST_FILE = fengqingtianqi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjz.fengqingtianqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -608,6 +613,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKW6K38424;
 				INFOPLIST_FILE = fengqingtianqi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cjz.fengqingtianqi;
 				PRODUCT_NAME = "$(TARGET_NAME)";

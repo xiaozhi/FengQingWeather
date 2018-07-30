@@ -10,15 +10,22 @@ import UIKit
 import Moya
 import RxSwift
 
+enum HFError: Error {
+    case test
+}
+
 class MainViewModel: NSObject {
     let weatherService = MoyaProvider<WeatherService>()
-    
+
     func requestForecast() -> Observable<ForecastList>{
         return weatherService.rx.request(.forecast("shenzhen")).asObservable().mapModel(type: ForecastList.self)
     }
     
     func requestNowWeather() -> Observable<NowWeatherWapper> {
-        return weatherService.rx.request(.now("shenzhen")).asObservable().mapModel(type: NowWeatherWapper.self)
+        return weatherService
+            .rx.request(.now("shenzhen"))
+            .asObservable()
+            .mapModel(type: NowWeatherWapper.self)
     }
     
 }
